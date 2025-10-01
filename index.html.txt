@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Pseudo Selectors Assignment</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: lightblue;
+        }
+        
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        
+        .section {
+            background-color: white;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid black;
+        }
+        
+        /* hover example */
+        .hover-box {
+            background-color: yellow;
+            padding: 10px;
+            width: 200px;
+            height: 50px;
+        }
+        
+        .hover-box:hover {
+            background-color: green;
+            color: white;
+        }
+        
+        /* link stuff */
+        a:link {
+            color: blue;
+            font-size: 18px;
+        }
+        
+        /* active */
+        a:active {
+            color: red;
+            background-color: yellow;
+        }
+        
+        /* first child */
+        .list-example li:first-child {
+            color: purple;
+            font-weight: bold;
+            background-color: pink;
+        }
+        
+        /* visited links */
+        a:visited {
+            color: gray;
+        }
+        
+        /* first line thing */
+        .paragraph-example::first-line {
+            color: orange;
+            font-size: 20px;
+        }
+        
+        .explanation {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-left: 3px solid blue;
+            margin: 10px 0;
+        }
+        
+    </style>
+</head>
+<body>
+
+<h1>My CSS Pseudo Selectors Assignment</h1>
+
+<div class="section">
+    <h2>1. Hover Selector</h2>
+    <div class="explanation">
+        The hover selector makes things change when you put your mouse on them.
+    </div>
+    <div class="hover-box">
+        Move mouse here
+    </div>
+    <p><b>CSS Code:</b></p>
+    <pre>.hover-box:hover {
+    background-color: green;
+    color: white;
+}</pre>
+</div>
+
+<div class="section">
+    <h2>2. Link Selector</h2>
+    <div class="explanation">
+        This selector styles links that haven't been clicked yet.
+    </div>
+    <p>Here are some links:</p>
+    <a href="#test1">Link 1</a><br>
+    <a href="#test2">Link 2</a><br>
+    <a href="http://google.com">Google</a>
+    
+    <p><b>CSS Code:</b></p>
+    <pre>a:link {
+    color: blue;
+    font-size: 18px;
+}</pre>
+</div>
+
+<div class="section">
+    <h2>3. Active Selector</h2>
+    <div class="explanation">
+        Active selector works when you click on something.
+    </div>
+    <p>Click and hold this link: <a href="#active-test">Active Link Test</a></p>
+    
+    <p><b>CSS Code:</b></p>
+    <pre>a:active {
+    color: red;
+    background-color: yellow;
+}</pre>
+</div>
+
+<div class="section">
+    <h2>4. First Child Selector</h2>
+    <div class="explanation">
+        First child selector picks the first item in a list or container.
+    </div>
+    <div class="list-example">
+        <ul>
+            <li>First item (this one is different)</li>
+            <li>Second item</li>
+            <li>Third item</li>
+            <li>Fourth item</li>
+        </ul>
+    </div>
+    
+    <p><b>CSS Code:</b></p>
+    <pre>.list-example li:first-child {
+    color: purple;
+    font-weight: bold;
+    background-color: pink;
+}</pre>
+</div>
+
+<div class="section">
+    <h2>5. Visited Selector</h2>
+    <div class="explanation">
+        Visited selector changes links after you click them. Try clicking the links above to see it work.
+    </div>
+    <p>Click these links and see them change color:</p>
+    <a href="#visited1">Visited Link 1</a><br>
+    <a href="#visited2">Visited Link 2</a>
+    
+    <p><b>CSS Code:</b></p>
+    <pre>a:visited {
+    color: gray;
+}</pre>
+</div>
+
+<div class="section">
+    <h2>6. First Line Selector</h2>
+    <div class="explanation">
+        First line selector only affects the first line of text in a paragraph.
+    </div>
+    <div class="paragraph-example">
+        <p>This is the first line of the paragraph and it should look different from the rest of the text. The rest of this paragraph should look normal and not have the special styling that the first line has. You can see that only the first line is orange and bigger.</p>
+    </div>
+    
+    <p><b>CSS Code:</b></p>
+    <pre>.paragraph-example::first-line {
+    color: orange;
+    font-size: 20px;
+}</pre>
+</div>
+
+<div style="background-color: lightyellow; padding: 15px; margin-top: 20px;">
+    <h3>Summary:</h3>
+    <p>These are the 6 pseudo selectors I learned about:</p>
+    <ul>
+        <li>:hover - for mouse over effects</li>
+        <li>:link - for unvisited links</li>
+        <li>:active - for when clicking</li>
+        <li>:first-child - for first items</li>
+        <li>:visited - for clicked links</li>
+        <li>::first-line - for first line of text</li>
+    </ul>
+    <p>Some use one colon (:) and some use two colons (::).</p>
+</div>
+
+</body>
+</html>
